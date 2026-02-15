@@ -1220,28 +1220,6 @@
             });
         });
 
-        // Form Submission
-function handleSubmit(event) {
-    event.preventDefault();
-    
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
-    
-    // Simulate form submission
-    alert("Thanks for your message! We'll get back to you within 24 hours.\n\nIn a real setup, this would send an email to your address.");
-    
-    event.target.reset();
-}
-
-// Add this at the very bottom of your script section
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    if (form) {
-        form.addEventListener('submit', handleSubmit);
-    }
-});
-        
-
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
