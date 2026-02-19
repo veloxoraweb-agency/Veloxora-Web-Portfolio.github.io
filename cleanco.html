@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanCo - Professional Cleaning Services Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1e293b;
+            background: #f0f9ff;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #0284c7;
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            background: #0ea5e9;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-weight: 700;
+        }
+
+        .booking-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            margin: 3rem 0;
+        }
+
+        .booking-section h2 {
+            text-align: center;
+            color: #0284c7;
+            margin-bottom: 2rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #0ea5e9;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            grid-column: 1 / -1;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid #0ea5e9;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .demo-banner {
+            background: #fef3c7;
+            color: #92400e;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">⚠️ Demo Business Website - Bookings go to test system only</div>
+
+    <div class="header">
+        <h1>🧹 CleanCo Services</h1>
+        <p>Professional Home & Office Cleaning in Toronto</p>
+        <div class="trust-badges">
+            <span class="trust-badge">⭐ 4.9 Rating</span>
+            <span class="trust-badge">🏆 500+ Homes Cleaned</span>
+            <span class="trust-badge">🛡️ Insured & Bonded</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="services">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Home Cleaning</h3>
+                <p>Deep cleaning for apartments, condos, and houses. Kitchen, bathrooms, bedrooms, living areas.</p>
+                <div class="price-tag">From $120</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Office Cleaning</h3>
+                <p>Commercial spaces, retail stores, medical offices. After-hours service available.</p>
+                <div class="price-tag">From $200</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧽</div>
+                <h3>Deep Cleaning</h3>
+                <p>Move-in/move-out, post-renovation, spring cleaning. Detailed and thorough.</p>
+                <div class="price-tag">From $250</div>
+            </div>
+        </div>
+
+        <div class="testimonial">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p>"CleanCo transformed our apartment! Professional, punctual, and spotless results every time. Highly recommend!"</p>
+            <p style="margin-top: 1rem; font-weight: 600; color: #64748b;">- Jennifer M., Downtown Toronto</p>
+        </div>
+
+        <div class="booking-section">
+            <h2>📅 Book Your Cleaning</h2>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Smith">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="(416) 555-0123">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Type *</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select Service...</option>
+                            <option value="home">Home Cleaning</option>
+                            <option value="office">Office Cleaning</option>
+                            <option value="deep">Deep Cleaning</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="address">Address *</label>
+                        <input type="text" id="address" name="address" required placeholder="123 Main St, Toronto, ON">
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <select id="time" name="time" required>
+                            <option value="">Select Time...</option>
+                            <option value="morning">Morning (8AM - 12PM)</option>
+                            <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                            <option value="evening">Evening (5PM - 8PM)</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="notes">Special Requests</label>
+                        <textarea id="notes" name="notes" placeholder="Allergies, specific areas to focus on, parking instructions..." rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Request Booking →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

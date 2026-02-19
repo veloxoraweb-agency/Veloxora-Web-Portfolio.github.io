@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Fashion - Demo E-Commerce</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1e293b;
+            background: #fdf2f8;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .nav {
+            background: #be185d;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 300px;
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #ec4899;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #be185d;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .size-options {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .size-btn {
+            width: 40px;
+            height: 40px;
+            border: 2px solid #e2e8f0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            border-color: #ec4899;
+            color: #ec4899;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-primary {
+            background: #ec4899;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #be185d;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #ec4899;
+            border: 2px solid #ec4899;
+        }
+
+        .features-bar {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            padding: 2rem;
+            background: white;
+            margin: 2rem 0;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #be185d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .demo-banner {
+            background: #fef3c7;
+            color: #92400e;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">⚠️ Demo Fashion Store - Payments go to Stripe test mode only</div>
+
+    <div class="header">
+        <h1>👗 Boutique Fashion</h1>
+        <p>Trendy Styles for Every Occasion</p>
+    </div>
+
+    <div class="nav">
+        <a href="#new">New Arrivals</a>
+        <a href="#dresses">Dresses</a>
+        <a href="#tops">Tops</a>
+        <a href="#sale">Sale</a>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+
+        <div class="features-bar">
+            <div class="feature-item">
+                <div class="feature-icon">🚚</div>
+                <div>Free Shipping $50+</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">↩️</div>
+                <div>30-Day Returns</div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <div>Secure Checkout</div>
+            </div>
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="product-badge">NEW</span>
+                    👗
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Summer Floral Dress</div>
+                    <div class="product-price">$59.99</div>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Added to cart!')">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx001" class="btn btn-secondary" target="_blank">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);">
+                    👚
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Silk Blouse - White</div>
+                    <div class="product-price">$45.99</div>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Added to cart!')">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx002" class="btn btn-secondary" target="_blank">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+                    <span class="product-badge">SALE</span>
+                    👖
+                </div>
+                <div class="product-info">
+                    <div class="product-name">High-Waist Jeans</div>
+                    <div class="product-price">$39.99 <span style="text-decoration: line-through; color: #94a3b8; font-size: 0.9rem;">$69.99</span></div>
+                    <div class="size-options">
+                        <button class="size-btn">24</button>
+                        <button class="size-btn">26</button>
+                        <button class="size-btn">28</button>
+                        <button class="size-btn">30</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Added to cart!')">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx003" class="btn btn-secondary" target="_blank">Buy Now</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);">
+                    🧥
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Trench Coat - Beige</div>
+                    <div class="product-price">$89.99</div>
+                    <div class="size-options">
+                        <button class="size-btn">XS</button>
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                    </div>
+                    <button class="btn btn-primary" onclick="alert('Added to cart!')">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx004" class="btn btn-secondary" target="_blank">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

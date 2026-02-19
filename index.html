@@ -9,20 +9,20 @@
     <style>
         /* CSS Reset and Variables */
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --secondary: #64748b;
-            --accent: #06b6d4;
-            --dark: #0f172a;
-            --light: #f8fafc;
-            --white: #ffffff;
-            --gray: #94a3b8;
-            --success: #10b981;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
-            --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary: #64748b;
+    --accent: #06b6d4;
+    --dark: #0f172a;
+    --light: #f8fafc;
+    --white: #ffffff;
+    --gray: #94a3b8;
+    --success: #10b981;
+    --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-2: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    --shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
 
         * {
             margin: 0;
@@ -789,7 +789,7 @@
     <!-- Portfolio Section -->
 <section class="portfolio" id="portfolio">
     <h2 class="section-title">Demo Projects</h2>
-    <p class="section-subtitle">Example work showing our capabilities. These demonstrate the features and quality we bring to every project.</p>
+    <p class="section-subtitle">Example work showing our capabilities. Click any project to view the live demo.</p>
     
     <div class="portfolio-filter">
         <button class="filter-btn active" onclick="filterPortfolio('all')">All</button>
@@ -799,89 +799,97 @@
     </div>
 
     <div class="portfolio-grid" id="portfolioGrid">
-        <!-- Project 1: E-Commerce -->
+        
+        <!-- Project 1: TechStore -->
         <div class="portfolio-item" data-category="ecommerce" onclick="openModal('project1')">
             <div class="portfolio-image">🛒</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">E-Commerce</span>
                 <h3>TechStore Demo</h3>
-                <p>Full e-commerce functionality with Stripe payments, shopping cart, product filtering, and mobile-optimized checkout flow.</p>
+                <p>Full e-commerce functionality with Stripe payments, cart functionality, and mobile-optimized design.</p>
                 <div class="portfolio-stats">
                     <span class="portfolio-stat">🛒 Cart System</span>
                     <span class="portfolio-stat">💳 Stripe Ready</span>
                 </div>
+                <a href="techstore.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
 
-        <!-- Project 2: Landing Page -->
+        <!-- Project 2: FitPro -->
         <div class="portfolio-item" data-category="landing" onclick="openModal('project2')">
             <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">🚀</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">Landing Page</span>
-                <h3>Launch Page Demo</h3>
-                <p>High-converting landing page with lead capture forms, social proof sections, and optimized mobile experience.</p>
+                <h3>FitPro Launch Demo</h3>
+                <p>High-converting landing page with lead capture forms and mobile-first design.</p>
                 <div class="portfolio-stats">
                     <span class="portfolio-stat">📱 Mobile First</span>
                     <span class="portfolio-stat">📝 Lead Forms</span>
                 </div>
+                <a href="fitpro.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
 
-        <!-- Project 3: Business Site -->
+        <!-- Project 3: CleanCo -->
         <div class="portfolio-item" data-category="business" onclick="openModal('project3')">
             <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🏢</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">Business Site</span>
-                <h3>Service Business Demo</h3>
-                <p>Professional service website with booking system integration, testimonials, service area pages, and contact management.</p>
+                <h3>CleanCo Services Demo</h3>
+                <p>Professional service website with booking system and testimonial showcase.</p>
                 <div class="portfolio-stats">
-                    <span class="portfolio-stat">📅 Booking Ready</span>
                     <span class="portfolio-stat">⭐ Reviews</span>
+                    <span class="portfolio-stat">📅 Booking Ready</span>
                 </div>
+                <a href="cleanco.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
 
-        <!-- Project 4: E-Commerce -->
+        <!-- Project 4: Boutique -->
         <div class="portfolio-item" data-category="ecommerce" onclick="openModal('project4')">
             <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">👗</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">E-Commerce</span>
-                <h3>Boutique Store Demo</h3>
-                <p>Fashion e-commerce with product galleries, size guides, Instagram integration, and streamlined checkout process.</p>
+                <h3>Boutique Fashion Demo</h3>
+                <p>Stylish online boutique with product galleries and streamlined checkout.</p>
                 <div class="portfolio-stats">
                     <span class="portfolio-stat">📸 Gallery</span>
-                    <span class="portfolio-stat">📏 Size Guides</span>
+                    <span class="portfolio-stat">💳 Easy Checkout</span>
                 </div>
+                <a href="boutique.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
 
-        <!-- Project 5: Landing Page -->
+        <!-- Project 5: AppLaunch -->
         <div class="portfolio-item" data-category="landing" onclick="openModal('project5')">
             <div class="portfolio-image" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">📱</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">Landing Page</span>
-                <h3>App Showcase Demo</h3>
-                <p>App launch page with feature highlights, download tracking, email capture, and video integration capabilities.</p>
+                <h3>AppLaunch Demo</h3>
+                <p>App launch page with feature highlights and email capture integration.</p>
                 <div class="portfolio-stats">
                     <span class="portfolio-stat">🎬 Video Ready</span>
                     <span class="portfolio-stat">📧 Email Capture</span>
                 </div>
+                <a href="applaunch.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
 
-        <!-- Project 6: Business Site -->
+        <!-- Project 6: Bean & Brew -->
         <div class="portfolio-item" data-category="business" onclick="openModal('project6')">
             <div class="portfolio-image" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">☕</div>
             <div class="portfolio-content">
                 <span class="portfolio-tag">Business Site</span>
-                <h3>Restaurant Demo</h3>
-                <p>Café website with digital menu, online ordering system, location integration, and event calendar functionality.</p>
+                <h3>Bean & Brew Café Demo</h3>
+                <p>Café website with digital menu, location map, and online ordering.</p>
                 <div class="portfolio-stats">
                     <span class="portfolio-stat">🗺️ Maps</span>
-                    <span class="portfolio-stat">📖 Menu</span>
+                    <span class="portfolio-stat">📖 Digital Menu</span>
                 </div>
+                <a href="cafe.html" class="btn btn--small btn--primary" target="_blank">View Live Demo →</a>
             </div>
         </div>
+
     </div>
 </section>
     <!-- Services Section -->
@@ -1009,7 +1017,7 @@
     </div>
 </footer>
 
-    <!-- Project Modals -->
+   <!-- Project 1 Modal: TechStore -->
 <div class="modal" id="modal-project1">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -1018,156 +1026,157 @@
             <p>E-Commerce Platform Features</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="techstore.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            <p><em>Note: This demo uses Stripe test mode. No real payments processed.</em></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Stripe payment integration ready</li>
-                <li>Shopping cart with localStorage persistence</li>
-                <li>Product filtering and search</li>
-                <li>Mobile-responsive checkout flow</li>
+                <li>Product catalog with 3 items</li>
+                <li>Shopping cart with localStorage</li>
+                <li>Stripe payment integration</li>
+                <li>Mobile-responsive design</li>
                 <li>Order confirmation system</li>
-                <li>Inventory display management</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript (vanilla), Stripe API integration, responsive design principles.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>We can build you a fully functional online store that accepts payments, manages products, and works perfectly on mobile devices.</p>
+            <p>HTML5, CSS3, JavaScript (vanilla), Stripe API, responsive design.</p>
         </div>
     </div>
 </div>
 
+<!-- Project 2 Modal: FitPro -->
 <div class="modal" id="modal-project2">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-header" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-            <h2>Launch Page Demo</h2>
-            <p>Landing Page Features</p>
+            <h2>FitPro Landing Page Demo</h2>
+            <p>High-Converting Landing Page</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="fitpro.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Lead capture form with validation</li>
-                <li>Mobile-first responsive design</li>
-                <li>Social proof testimonial sections</li>
-                <li>Call-to-action optimization</li>
-                <li>Fast loading (under 2 seconds)</li>
-                <li>SEO-optimized structure</li>
+                <li>Hero section with CTA</li>
+                <li>Lead capture form</li>
+                <li>Mobile-first responsive</li>
+                <li>Social proof section</li>
+                <li>Fast loading optimization</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript form handling, Google Analytics ready, meta tag optimization.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>A landing page designed to convert visitors into leads or customers, with tracking and optimization built in.</p>
+            <p>HTML5, CSS3, JavaScript form handling, SEO-optimized.</p>
         </div>
     </div>
 </div>
 
+<!-- Project 3 Modal: CleanCo -->
 <div class="modal" id="modal-project3">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-header" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-            <h2>Service Business Demo</h2>
-            <p>Business Website Features</p>
+            <h2>CleanCo Business Site Demo</h2>
+            <p>Service Business Website</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="cleanco.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Online booking system integration</li>
-                <li>Service area page structure</li>
-                <li>Customer testimonial display</li>
-                <li>Contact form with email forwarding</li>
-                <li>Google Maps integration</li>
-                <li>Mobile-responsive design</li>
+                <li>Service showcase</li>
+                <li>Booking form integration</li>
+                <li>Testimonial display</li>
+                <li>Contact form</li>
+                <li>Google Maps ready</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript, Formspree integration, Google Maps API, responsive grid layout.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>A professional website that helps customers find you, book services, and trust your business.</p>
+            <p>HTML5, CSS3, JavaScript, Formspree, responsive grid.</p>
         </div>
     </div>
 </div>
 
+<!-- Project 4 Modal: Boutique -->
 <div class="modal" id="modal-project4">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
-            <h2>Boutique Store Demo</h2>
-            <p>Fashion E-Commerce Features</p>
+            <h2>Boutique Fashion Store Demo</h2>
+            <p>Fashion E-Commerce</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="boutique.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            <p><em>Note: Demo uses Stripe test mode.</em></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Product gallery with zoom functionality</li>
-                <li>Size guide and variant selection</li>
-                <li>Instagram feed integration</li>
-                <li>Lookbook display sections</li>
-                <li>Simplified checkout process</li>
-                <li>Wishlist functionality</li>
+                <li>Product gallery</li>
+                <li>Size guide</li>
+                <li>Stripe checkout</li>
+                <li>Mobile-optimized</li>
+                <li>Fast image loading</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript, Instagram API integration, image optimization, mobile-first design.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>A stylish online store that showcases products beautifully and makes purchasing easy for customers.</p>
+            <p>HTML5, CSS3, JavaScript, Stripe API, image optimization.</p>
         </div>
     </div>
 </div>
 
+<!-- Project 5 Modal: AppLaunch -->
 <div class="modal" id="modal-project5">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-header" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
-            <h2>App Showcase Demo</h2>
-            <p>App Launch Page Features</p>
+            <h2>AppLaunch Demo</h2>
+            <p>App Launch Landing Page</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="applaunch.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Video background integration ready</li>
-                <li>Feature highlight sections</li>
-                <li>App Store / Play Store button integration</li>
-                <li>Email capture for beta testers</li>
-                <li>Social sharing optimization</li>
-                <li>Download tracking setup</li>
+                <li>Hero with video background ready</li>
+                <li>Feature highlights</li>
+                <li>Email capture form</li>
+                <li>App store buttons</li>
+                <li>Social sharing meta tags</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript, video embedding, social meta tags, analytics integration.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>A launch page that drives app downloads, captures interested users, and tracks performance.</p>
+            <p>HTML5, CSS3, JavaScript, video embedding, social meta tags.</p>
         </div>
     </div>
 </div>
 
+<!-- Project 6 Modal: Bean & Brew -->
 <div class="modal" id="modal-project6">
     <div class="modal-content">
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-header" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-            <h2>Restaurant Website Demo</h2>
-            <p>Restaurant Site Features</p>
+            <h2>Bean & Brew Café Demo</h2>
+            <p>Restaurant Website</p>
         </div>
         <div class="modal-body">
+            <h3>Live Demo</h3>
+            <p><a href="cafe.html" target="_blank" style="color: var(--primary); font-weight: 600; font-size: 1.1rem;">→ View Live Demo Here ←</a></p>
+            
             <h3>Features Built</h3>
             <ul>
-                <li>Interactive digital menu</li>
-                <li>Online ordering system integration</li>
-                <li>Google Maps and hours display</li>
-                <li>Event calendar functionality</li>
-                <li>Reservation form system</li>
-                <li>Mobile-optimized for on-the-go customers</li>
+                <li>Digital menu display</li>
+                <li>Online ordering form</li>
+                <li>Google Maps integration</li>
+                <li>Hours and location</li>
+                <li>Mobile-friendly for on-the-go customers</li>
             </ul>
             
             <h3>Technical Stack</h3>
-            <p>HTML5, CSS3, JavaScript, Google Maps API, calendar integration, responsive design.</p>
-            
-            <h3>What This Means For You</h3>
-            <p>A website that brings customers in, takes orders online, and reduces phone calls asking for basic info.</p>
+            <p>HTML5, CSS3, JavaScript, Google Maps API, responsive design.</p>
         </div>
     </div>
 </div>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Demo E-Commerce</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            color: #2563eb;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .product-desc {
+            color: #64748b;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: #2563eb;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1d4ed8;
+        }
+
+        .btn-secondary {
+            background: #10b981;
+            color: white;
+            margin-top: 0.5rem;
+        }
+
+        .btn-secondary:hover {
+            background: #059669;
+        }
+
+        .cart-section {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-section h2 {
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .cart-total {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-align: right;
+            margin-top: 1rem;
+            color: #2563eb;
+        }
+
+        .empty-cart {
+            color: #64748b;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .test-mode {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛒 TechStore</h1>
+        <p>Demo E-Commerce Store</p>
+    </div>
+
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="test-mode">
+            ⚠️ <strong>Test Mode:</strong> This is a demo store. Use Stripe test card: 4242 4242 4242 4242
+        </div>
+
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">🎧</div>
+                <div class="product-info">
+                    <div class="product-name">Premium Wireless Headphones</div>
+                    <div class="product-price">$149.99</div>
+                    <div class="product-desc">Noise cancelling, 30hr battery, premium sound quality.</div>
+                    <button class="btn btn-primary" onclick="addToCart('headphones', 'Premium Wireless Headphones', 149.99)">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx123" class="btn btn-secondary" target="_blank">Buy Now with Stripe</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">⌚</div>
+                <div class="product-info">
+                    <div class="product-name">Smart Watch Pro</div>
+                    <div class="product-price">$299.99</div>
+                    <div class="product-desc">Fitness tracking, notifications, 7-day battery life.</div>
+                    <button class="btn btn-primary" onclick="addToCart('watch', 'Smart Watch Pro', 299.99)">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx456" class="btn btn-secondary" target="_blank">Buy Now with Stripe</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">🔋</div>
+                <div class="product-info">
+                    <div class="product-name">Portable Power Bank</div>
+                    <div class="product-price">$49.99</div>
+                    <div class="product-desc">20000mAh, fast charging, dual USB-C ports.</div>
+                    <button class="btn btn-primary" onclick="addToCart('powerbank', 'Portable Power Bank', 49.99)">Add to Cart</button>
+                    <a href="https://buy.stripe.com/test_xxx789" class="btn btn-secondary" target="_blank">Buy Now with Stripe</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-section">
+            <h2>🛒 Shopping Cart</h2>
+            <div id="cartItems">
+                <div class="empty-cart">Your cart is empty. Add some products!</div>
+            </div>
+            <div id="cartTotal" class="cart-total" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('techstore_cart')) || [];
+
+        function addToCart(id, name, price) {
+            const existingItem = cart.find(item => item.id === id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            
+            saveCart();
+            displayCart();
+            alert(`${name} added to cart!`);
+        }
+
+        function removeFromCart(id) {
+            cart = cart.filter(item => item.id !== id);
+            saveCart();
+            displayCart();
+        }
+
+        function saveCart() {
+            localStorage.setItem('techstore_cart', JSON.stringify(cart));
+        }
+
+        function displayCart() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            const cartTotalDiv = document.getElementById('cartTotal');
+            
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<div class="empty-cart">Your cart is empty. Add some products!</div>';
+                cartTotalDiv.style.display = 'none';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="cart-item">
+                        <div>
+                            <strong>${item.name}</strong><br>
+                            $${item.price.toFixed(2)} x ${item.quantity}
+                        </div>
+                        <div>
+                            $${itemTotal.toFixed(2)}
+                            <button onclick="removeFromCart('${item.id}')" style="margin-left: 1rem; background: #ef4444; color: white; border: none; padding: 0.25rem 0.5rem; border-radius: 4px; cursor: pointer;">Remove</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsDiv.innerHTML = html;
+            cartTotalDiv.innerHTML = `Total: $${total.toFixed(2)}`;
+            cartTotalDiv.style.display = 'block';
+        }
+
+        // Load cart on page load
+        displayCart();
+    </script>
+</body>
+</html>
