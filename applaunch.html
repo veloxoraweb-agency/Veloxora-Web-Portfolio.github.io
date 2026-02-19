@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppLaunch - Mobile App Landing Page Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1e293b;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 25px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .download-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(0,0,0,0.3);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            text-decoration: none;
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .screenshots {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .screenshots h2 {
+            color: #764ba2;
+            margin-bottom: 2rem;
+        }
+
+        .phone-mockup {
+            display: inline-block;
+            width: 250px;
+            height: 500px;
+            background: #1e293b;
+            border-radius: 30px;
+            padding: 1rem;
+            margin: 0 1rem;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .signup-section {
+            background: white;
+            padding: 3rem;
+                        border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .signup-section h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .signup-section p {
+            color: #64748b;
+            margin-bottom: 2rem;
+        }
+
+        .email-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .email-form input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .email-form input:focus {
+            outline: none;
+            border-color: #764ba2;
+        }
+
+        .email-form button {
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+
+        .stat-label {
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .demo-banner {
+            background: #fef3c7;
+            color: #92400e;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .phone-mockup {
+                width: 200px;
+                height: 400px;
+            }
+            
+            .email-form {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">⚠️ Demo App Landing Page - Email signups go to test system only</div>
+
+    <div class="hero">
+        <a href="index.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="app-icon">🚀</div>
+        <h1>AppLaunch</h1>
+        <p>The productivity app that helps you achieve more every day. Simple, fast, effective.</p>
+        
+        <div class="download-btns">
+            <a href="#" class="download-btn">
+                <span>📱</span>
+                <span>App Store</span>
+            </a>
+            <a href="#" class="download-btn">
+                <span>🤖</span>
+                <span>Google Play</span>
+            </a>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">10K+</div>
+                <div class="stat-label">Downloads</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4.8★</div>
+                <div class="stat-label">Rating</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Countries</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Lightning Fast</h3>
+                <p>Optimized for speed. No lag, no waiting, just results.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Secure</h3>
+                <p>Your data is encrypted and protected. Privacy first.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <h3>Beautiful Design</h3>
+                <p>Intuitive interface that just makes sense.</p>
+            </div>
+        </div>
+
+        <div class="screenshots">
+            <h2>See It In Action</h2>
+            <div class="phone-mockup">
+                <div class="phone-screen">📊</div>
+            </div>
+            <div class="phone-mockup">
+                <div class="phone-screen">✅</div>
+            </div>
+            <div class="phone-mockup">
+                <div class="phone-screen">📈</div>
+            </div>
+        </div>
+
+        <div class="signup-section">
+            <h2>Get Early Access</h2>
+            <p>Join 5,000+ beta testers. Be the first to try new features.</p>
+            <form class="email-form" action="https://formspree.io/f/YOUR_FORM_ID " method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Join Beta →</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
